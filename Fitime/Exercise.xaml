@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             x:Class="Fitime.Exercise">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="./Resources/Drawable/exer.jpg" HeightRequest="200" WidthRequest="300"/>
+            <Frame BackgroundColor="{Binding Color, Mode=TwoWay}" HeightRequest="200" WidthRequest="200" CornerRadius="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0" Padding="0">
+                <Label Text="{Binding Timer, Mode=TwoWay}" TextColor="Black" FontSize="Header" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame BackgroundColor="Black">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding SetNumber, Mode=TwoWay}" TextColor="Silver" FontSize="Large"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="Black">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding ExerciseState, Mode=TwoWay}" TextColor="Silver" FontSize="Large"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

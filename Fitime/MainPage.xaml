@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             x:Class="Fitime.MainPage">
+
+    <StackLayout Padding="10">
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="50">
+            <Label Text="WORK HARD IN SILENCE SO THAT SUCCESS CAN BE YOUR NOISE" TextColor="Silver" FontSize="Large" HorizontalTextAlignment="Center"/>
+        </Frame>
+        <Frame BackgroundColor="Blue" Padding="24" CornerRadius="50">
+        <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="CenterAndExpand">
+            <Label Text="Sets " FontSize="Title" TextColor="Silver" VerticalTextAlignment="Center"/>
+            <Entry Text="{Binding Sets, Mode=TwoWay}" WidthRequest="30" PlaceholderColor="Silver" TextColor="Silver"/>
+        </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" Padding="24" CornerRadius="50">
+            <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="CenterAndExpand">
+                <Label Text="Exercises " TextColor="Silver" FontSize="Title" VerticalTextAlignment="Center"/>
+                <Entry Text="{Binding ExercisesPerSet, Mode=TwoWay}" WidthRequest="30"/>
+            </StackLayout>
+        </Frame>
+        <Frame  BackgroundColor="Yellow" Padding="24" CornerRadius="50">
+        <StackLayout Orientation="Horizontal"  Padding="5">
+            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                <Label Text="Set Duration " FontSize="Title" TextColor="Silver"  VerticalTextAlignment="Center"/>
+                <Entry Text="{Binding SetDuration, Mode=TwoWay}" WidthRequest="30" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Break Duration " TextColor="Silver" FontSize="Title" VerticalTextAlignment="Center"/>
+                <Entry Text="{Binding BreakDuration, Mode=TwoWay}" WidthRequest="30" />
+            </StackLayout>
+        </StackLayout>
+        </Frame>
+        <StackLayout>
+            <Button Text="Start" WidthRequest="30" BackgroundColor="DarkRed" Command="{Binding TimerCommand}" CornerRadius="50"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
