@@ -1,2 +1,2 @@
 # WorkoutTimer-
-Android App developed to keep time during a workout
+Xamarian based Android App developed to keep time during a workout
